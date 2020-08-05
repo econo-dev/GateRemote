@@ -242,16 +242,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 //        }
     }
 
-    /**
-     * Handle a click on the Wglxy views at the bottom.
-     */
-
-    public void onClickWglxy(View v) {
-        Intent viewIntent = new Intent("android.intent.action.VIEW",
-                Uri.parse("http://double-star.appspot.com/blahti/ds-download.html"));
-        startActivity(viewIntent);
-
-    }
 
 
 /**
