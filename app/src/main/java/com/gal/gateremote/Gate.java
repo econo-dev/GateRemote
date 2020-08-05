@@ -5,8 +5,7 @@ import static com.gal.gateremote.Gate.State.OPEN;
 import static com.gal.gateremote.Gate.State.STOP;
 
 class Gate {
-//    private boolean isOpen;
-//    private boolean isStop;
+
     private int i=0;
     private State state;
 
@@ -38,7 +37,7 @@ class Gate {
     }
 
     public void nextState() {
-//        int i;
+
         switch (this.getState()){
             case OPEN:
                 i=1;
@@ -46,7 +45,6 @@ class Gate {
                 break;
             case STOP:
                 this.state = i==1 ? CLOSE : OPEN;
-//                this.state = State.CLOSE;
                 break;
             case CLOSE:
                 i=2;

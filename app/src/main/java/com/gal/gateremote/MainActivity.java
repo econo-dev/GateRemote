@@ -47,7 +47,6 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
     OkHttpClient client = new OkHttpClient();
     Request request;
-    boolean isOpen = false;
     int stateFlag = 0;
     Context context;
 
@@ -77,25 +76,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             public void onClick(View v) {
                 try {
                     sendPostRequest();
-//
-//                    switch (gate.getState()){
-//                        case OPEN:
-//                            btnOpen.setText("STOP");
-//                            stateFlag = 1;
-////                            gate.nextState();
-//                            break;
-//                        case STOP:
-//                            btnOpen.setText(stateFlag==1?"CLOSE":"OPEN");
-////                            gate.nextState();
-//                            break;
-//                        case CLOSE:
-//                            btnOpen.setText("STOP");
-//                            stateFlag = 2;
-////                            gate.nextState();
-//                            break;
-//                        default:
-//                            break;
-//                    }
                     setButtonStates();
                     gate.nextState();
 
@@ -123,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         );
     }
 
+    /** state-machine pattern.
+     *  changing button text accordingly
+     */
     public void setButtonStates() {
         switch (gate.getState()){
             case OPEN:
