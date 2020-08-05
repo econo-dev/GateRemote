@@ -4,4 +4,5 @@
 ### incorporating clickable image buttons and simple android UI Button.
 ### implementing state-machine design pattern to determine relay state, updating the status on the button's text label. 
 
-# Release 1.0.0
+# Release
+### 1.0
